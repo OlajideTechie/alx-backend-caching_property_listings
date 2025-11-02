@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   postgres:
-    image: postgres:18
+    image: postgres:latest
     container_name: postgres_db
     restart: always
     ports:
@@ -17,7 +17,7 @@ services:
       - backend_net
 
   redis:
-    image: redis:latest
+    image: redis_data
     container_name: redis_cache
     restart: always
     ports:
@@ -30,3 +30,4 @@ networks:
 
 volumes:
   postgres_data:
+  redis_data:
